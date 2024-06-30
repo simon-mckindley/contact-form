@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Contact form</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <form method="post">
+    <h1>Contact Us</h1>
+
+    <div class="line">
+      <div class="input-wrapper" id="fname-wrapper">
+        <label class="label required" for="first-name">First Name</label>
+        <input type="text" name="first-name" id="first-name" class="input" maxlength="30">
+        <span class="error" id="fname-error">This field is required</span>
+      </div>
+
+      <div class="input-wrapper" id="lname-wrapper">
+        <label class="label required" for="last-name">Last Name</label>
+        <input type="text" name="last-name" id="last-name" class="input" maxlength="30">
+        <span class="error" id="lname-error">This field is required</span>
+      </div>
+    </div>
+
+    <div class="input-wrapper" id="email-wrapper">
+      <label class="label required" for="email">Email Address</label>
+      <input type="email" name="email" id="email" class="input" maxlength="30">
+      <span class="error" id="email-error">This field is required</span>
+    </div>
+
+    <div class="input-wrapper">
+      <div class="label required">Query Type</div>
+
+      <div class="line">
+        <label class="input radio-input" for="general" class="label">
+          <input type="radio" name="query" id="general" value="general">
+          General Enquiry
+        </label>
+        <label class="input radio-input" for="support" class="label">
+          <input type="radio" name="query" id="support" value="support">
+          Support Request
+        </label>
+      </div>
+      <span class="error" id="query-error">Please select a query type</span>
+    </div>
+
+    <div class="input-wrapper" id="message-wrapper">
+      <label class="label required" for="message">Message</label>
+      <textarea class="input" name="message" id="message" rows="3" maxlength="200"></textarea>
+      <span class="error" id="message-error">This field is required</span>
+    </div>
+
+    <div class="checkbox-wrapper">
+      <input class="input" type="checkbox" name="consent" id="consent">
+      <label class="label required" for="consent">I consent to being contacted by the team</label>
+      <span class="error" id="consent-error">To submit this form, please consent to being contacted</span>
+    </div>
+
+    <input class="submit-btn" type="submit" value="Submit">
+  </form>
+
+  <dialog class="success-diag">
+    <div class="diag-title">
+      <img width="30" src="assets/images/icon-success-check.svg" alt="">
+      <div>Message Sent!</div>
+    </div>
+    <div>Thanks for completing the form. We'll be in touch soon!</div>
+    <button type="button" class="diag-close">X</button>
+  </dialog>
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+
+</html>
